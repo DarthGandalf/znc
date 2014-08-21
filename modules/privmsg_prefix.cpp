@@ -37,6 +37,39 @@ public:
 		return CONTINUE;
 	}
 
+	/*
+	@time=2014-08-21T15:15:05.861Z :other!someident@notmyhost PRIVMSG me :This is a message sent to me.
+	@time=2014-08-21T15:15:10.090Z :me!myident@myhost PRIVMSG other :This is a message sent by me.
+	*/
+	virtual EModRet OnPrivBufferPlayLine(CClient &Client, CString &sLine) {
+		VCString vsSplit;
+		sLine.Split(" ", vsSplit);
+
+		bool changed = false;
+		for (unsigned int a = 0; a < vsSplit.size(); a++) {
+			if (vsSplit[a].WildCmp(":*!*@*")) {
+				if (a + 3 >= vsSplit.size()) break;
+				CString sFrom = vsSplit[a].TrimPrefix_n(":").Token(0, false, "!", false);
+				CString sMask = vsSplit[a].Token(1, false, "!", false);
+				// to = vsSplit[a+2]
+				if (sFrom.Equals(Client.GetNick()) || sMask.Equals(Client.GetNickMask().Token(1, false, "!", false))) {
+					vsSplit[a] = ":" + CString(vsSplit[a+2]) + "!prefix@privmsg.znc.in";
+					vsSplit[a+2] = sFrom;
+					CString sMessage = vsSplit[a+3].TrimPrefix_n(":");
+					if (sMessage.StartsWith(CString("\x01") + "ACTION")) {
+						vsSplit[a+3] = CString(":\x01") + "ACTION ->" + sMessage;
+					} else {
+						vsSplit[a+3] = ":-> " + sMessage;
+					}
+					changed = true;
+				}
+			}
+		}
+		if (changed)  {
+			sLine = CString(" ").Join(vsSplit.begin(), vsSplit.end());
+		}
+		return CONTINUE;
+	}
 };
 
 USERMODULEDEFS(CPrivMsgPrefixMod, "Send outgoing PRIVMSGs and CTCP ACTIONs to other clients using ugly prefixes")
