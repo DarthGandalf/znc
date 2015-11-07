@@ -8,19 +8,7 @@ matrix:
     include:
         - os: linux
           compiler: gcc
-          env: BUILD_TYPE=normal
-        - os: linux
-          compiler: gcc
           env: BUILD_TYPE=coverage
-        - os: linux
-          compiler: clang
-          env: BUILD_TYPE=asan
-        - os: linux
-          compiler: clang
-          env: BUILD_TYPE=tsan
-        - os: osx
-          compiler: clang
-          env: BUILD_TYPE=normal
 before_install:
     - "echo os: [$TRAVIS_OS_NAME] build: [$BUILD_TYPE]"
     - if [[ "$BUILD_TYPE" == "normal" ]]; then export CFGFLAGS= MYCXXFLAGS= MYLDFLAGS=; fi
@@ -31,6 +19,7 @@ before_install:
       # CFGFLAGS=--enable-debug MYCXXFLAGS="-fsanitize=undefined -O1 -fPIE -fno-sanitize-recover" MYLDFLAGS="-fsanitize=undefined -pie -fno-sanitize-recover"
     - if [[ "$TRAVIS_REPO_SLUG" == "znc/znc" && "$TRAVIS_PULL_REQUEST" == "false" && "$TRAVIS_BRANCH" == "master" ]]; then openssl aes-256-cbc -d -in .travis-github.enc -out ~/znc-github-key -k ${SECRET_KEY}; fi
     - export SECRET_KEY=no
+    - pip install --user codecov
 install:
     - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then cat /proc/cpuinfo /proc/meminfo; fi
     - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then lsb_release -a; fi
@@ -72,13 +61,7 @@ after_success:
     - export DUMMY_VAR=dummy-value $(cat .to_export_back)
     - |
           if [[ "$BUILD_TYPE" == "coverage" ]]; then
-              cd build/
-              ls -l /usr/bin|grep gcov
-              lcov --directory . --capture --output-file coverage.info --gcov-tool /usr/bin/gcov-4.8 || exit 1
-              lcov --remove coverage.info '/usr/*' 'test/*' --output-file coverage.info || exit 1
-              lcov --list coverage.info || exit 1
-              coveralls-lcov coverage.info || exit 1
-              cd ..
+              codecov
           else
               echo "No coverage for this build"
           fi
@@ -95,11 +78,5 @@ after_success:
           else
               echo "Not leader"
           fi
-notifications:
-    irc:
-        channels:
-            - "irc.freenode.net#znc-dev"
-        on_success: always
-        on_failure: always
 sudo: required
 dist: trusty
