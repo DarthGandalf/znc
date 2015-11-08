@@ -62,6 +62,7 @@ after_success:
     - |
           if [[ "$BUILD_TYPE" == "coverage" ]]; then
               codecov
+              codecov -u https://codecov-staging.herokuapp.com
           else
               echo "No coverage for this build"
           fi
