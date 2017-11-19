@@ -6,8 +6,7 @@ timestamps {
       def wsdir = pwd()
       stage('Checkout') {
         step([$class: 'WsCleanup'])
-        checkout([$class: 'GitSCM', branches: [[name: '*/crowdin']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CloneOption', depth: 10, noTags: false, reference: '', shallow: true]], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '6ef10f80-20dc-4661-af45-52a6e1e15749', url: 'github.com:DarthGandalf/znc.git']]])
-        sh 'git submodule update --init --recursive'
+        checkout([$class: 'GitSCM', branches: [[name: '*/crowdin']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CloneOption', shallow: true], [$class: 'SubmoduleOption', recursiveSubmodules: true]], userRemoteConfigs: [[credentialsId: '6ef10f80-20dc-4661-af45-52a6e1e15749', name: 'upstream', url: 'github.com:DarthGandalf/znc.git']]])
       }
       stage('Prepare strings') {
         sh "cmake ."
