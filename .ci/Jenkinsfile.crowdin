@@ -11,13 +11,15 @@ timestamps {
         echo z
         sh "ls -l $z"
       }
-      stage('Prepare strings') {
-        sh 'cmake .'
-        sh 'make translation'
-        sh 'git status'
-      }
-      stage('Crowdin') {
-        withCredentials([string(credentialsId: '11c7e2b4-f990-4670-98a4-c89d2a5a2f43', variable: 'CROWDIN_API_KEY')]) {
+      dir("$wsdir/build") {
+        stage('Prepare strings') {
+          sh 'cmake $wsdir'
+          sh 'make translation'
+          sh 'git status'
+        }
+        stage('Crowdin') {
+          withCredentials([string(credentialsId: '11c7e2b4-f990-4670-98a4-c89d2a5a2f43', variable: 'CROWDIN_API_KEY')]) {
+          }
         }
       }
     }
