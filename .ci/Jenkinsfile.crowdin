@@ -5,8 +5,8 @@ timestamps {
     timeout(time: 30, unit: 'MINUTES') {
       def wsdir = pwd()
       stage('Checkout') {
-        shell "echo $wsdir"
-        shell 'ls -l'
+        sh "echo $wsdir"
+        sh 'ls -l'
       }
     }
   }
