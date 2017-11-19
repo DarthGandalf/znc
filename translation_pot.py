@@ -56,7 +56,7 @@ for tmpl_dir in args.tmpl_dirs:
                         tmpl.append('msgstr ""')
                     tmpl.append('')
 if tmpl:
-    with open(tmpl_pot, 'w') as f:
+    with open(tmpl_pot, 'wt', encoding='utf8') as f:
         print('msgid ""', file=f)
         print('msgstr ""', file=f)
         print(r'"Content-Type: text/plain; charset=UTF-8\n"', file=f)
