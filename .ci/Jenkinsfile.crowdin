@@ -7,14 +7,15 @@ timestamps {
       stage('Checkout') {
         step([$class: 'WsCleanup'])
         checkout([$class: 'GitSCM', branches: [[name: '*/crowdin']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CloneOption', shallow: true], [$class: 'SubmoduleOption', recursiveSubmodules: true]], userRemoteConfigs: [[credentialsId: '6ef10f80-20dc-4661-af45-52a6e1e15749', name: 'upstream', url: 'github.com:DarthGandalf/znc.git']]])
+        fileOperations([fileDownloadOperation(url: 'https://downloads.crowdin.com/cli/v2/crowdin-cli.zip', targetFileName: 'crowdin-cli.zip', targetLocation: '.'), fileUnZipOperation(filePath: 'crowdin-cli.zip')])
+        sh 'ls -l'
       }
       stage('Prepare strings') {
-        sh "cmake ."
-        sh "make translation"
+        sh 'cmake .'
+        sh 'make translation'
+        sh 'git status'
       }
       stage('Crowdin') {
-        fileOperations([fileDownloadOperation(url: 'https://downloads.crowdin.com/cli/v2/crowdin-cli.zip'), fileUnZipOperation(filePath: 'crowdin-cli.zip')])
-        sh 'ls -l'
         withCredentials([string(credentialsId: '11c7e2b4-f990-4670-98a4-c89d2a5a2f43', variable: 'CROWDIN_API_KEY')]) {
         }
       }
