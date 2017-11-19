@@ -3,23 +3,23 @@
 timestamps {
   node {
     timeout(time: 30, unit: 'MINUTES') {
-      def wsdir = pwd()
+      def crowdin_cli = tool 'crowdin-cli';
       stage('Checkout') {
         step([$class: 'WsCleanup'])
         checkout([$class: 'GitSCM', branches: [[name: '*/crowdin']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CloneOption', shallow: true], [$class: 'SubmoduleOption', recursiveSubmodules: true]], userRemoteConfigs: [[credentialsId: '6ef10f80-20dc-4661-af45-52a6e1e15749', name: 'upstream', url: 'github.com:DarthGandalf/znc.git']]])
-        def z = tool 'crowdin-cli';
         echo z
         sh "ls -l $z"
       }
-      dir("$wsdir/build") {
-        stage('Prepare strings') {
-          sh 'cmake $wsdir'
+      stage('Prepare strings') {
+        dir("build") {
+          sh "cmake .."
           sh 'make translation'
-          sh 'git status'
         }
-        stage('Crowdin') {
-          withCredentials([string(credentialsId: '11c7e2b4-f990-4670-98a4-c89d2a5a2f43', variable: 'CROWDIN_API_KEY')]) {
-          }
+        sh 'git status'
+        sh 'git diff'
+      }
+      stage('Crowdin') {
+        withCredentials([string(credentialsId: '11c7e2b4-f990-4670-98a4-c89d2a5a2f43', variable: 'CROWDIN_API_KEY')]) {
         }
       }
     }
