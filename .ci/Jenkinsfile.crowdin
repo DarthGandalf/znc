@@ -22,7 +22,9 @@ timestamps {
           withEnv(['CROWDIN_BASE_PATH='+pwd()]) {
             sh "$crowdin_cli upload sources --branch master"
             sh "$crowdin_cli upload translations --branch master"
+            sh 'git reset --hard'
             sh "$crowdin_cli download --branch master"
+            sh 'git status'
           }
         }
       }
