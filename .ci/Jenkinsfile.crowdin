@@ -2,6 +2,13 @@
 
 timestamps {
   node {
-    sh 'echo hi'
+    timeout(time: 30, unit: 'MINUTES') {
+      def wsdir = pwd()
+      stage('Checkout') {
+        shell 'ls -l'
+      }
+    }
   }
 }
+
+// vim: set ts=2 sw=2 et:
