@@ -40,7 +40,7 @@ pattern = re.compile(r'<\?\s*(?:FORMAT|(PLURAL))\s+(?:CTX="([^"]+?)"\s+)?"([^"]+
 for tmpl_dir in args.tmpl_dirs:
     for fname in glob.iglob(tmpl_dir + '/*.tmpl'):
         fbase = fname[len(args.strip_prefix):]
-        with open(fname) as f:
+        with open(fname, 'rt', encoding='utf8') as f:
             for linenum, line in enumerate(f):
                 for x in pattern.finditer(line):
                     text, plural, context = x.group(3), x.group(4), x.group(2)
