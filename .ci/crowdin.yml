@@ -1,5 +1,6 @@
 project_identifier: znc-bouncer
 preserve_hierarchy: true
+api_key_env: CROWDIN_API_KEY
 
 files:
   - source: /src/po/znc.pot

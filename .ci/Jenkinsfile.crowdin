@@ -5,8 +5,19 @@ timestamps {
     timeout(time: 30, unit: 'MINUTES') {
       def wsdir = pwd()
       stage('Checkout') {
-        sh "echo $wsdir"
+        step([$class: 'WsCleanup'])
+        checkout scm
+        sh 'git submodule update --init --recursive'
+      }
+      stage('Prepare strings') {
+        sh "cmake ."
+        sh "make translation"
+      }
+      stage('Crowdin') {
+        fileOperations([fileDownloadOperation(url: 'https://downloads.crowdin.com/cli/v2/crowdin-cli.zip'), fileUnZipOperation(filePath: 'crowdin-cli.zip')])
         sh 'ls -l'
+        withCredentials([string(credentialsId: '11c7e2b4-f990-4670-98a4-c89d2a5a2f43', variable: 'CROWDIN_API_KEY')]) {
+        }
       }
     }
   }
