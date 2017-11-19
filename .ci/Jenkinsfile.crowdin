@@ -1,0 +1,7 @@
+#!groovy
+
+timestamps {
+  node {
+    sh 'echo hi'
+  }
+}
