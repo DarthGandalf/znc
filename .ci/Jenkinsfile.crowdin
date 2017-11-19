@@ -19,9 +19,11 @@ timestamps {
       }
       stage('Crowdin') {
         withCredentials([string(credentialsId: '11c7e2b4-f990-4670-98a4-c89d2a5a2f43', variable: 'CROWDIN_API_KEY')]) {
-          sh "$crowdin_cli upload sources --branch master"
-          sh "$crowdin_cli upload translations --branch master"
-          sh "$crowdin_cli download --branch master"
+          withEnv(['CROWDIN_BASE_PATH='+pwd()]) {
+            sh "$crowdin_cli upload sources --branch master"
+            sh "$crowdin_cli upload translations --branch master"
+            sh "$crowdin_cli download --branch master"
+          }
         }
       }
     }
