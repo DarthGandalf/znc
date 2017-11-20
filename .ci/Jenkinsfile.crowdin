@@ -39,7 +39,7 @@ timestamps {
           sh 'chmod +x run_ssh.sh'
           sh 'cat run_ssh.sh'
           withEnv(['GIT_SSH=run_ssh.sh']) {
-            sh 'git push my HEAD:l10n_master -f'
+            sh 'git push my HEAD:refs/l10n_master -f'
           }
         }
       }
