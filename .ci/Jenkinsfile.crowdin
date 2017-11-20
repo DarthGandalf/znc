@@ -33,7 +33,7 @@ timestamps {
         sh 'git add .'
         sh 'git commit -m "Update translations from Crowdin"'
         sh 'git remote add my github.com:znc-jenkins/znc.git'
-        sh 'git push HEAD my:l10n_master -f'
+        sh 'git push my HEAD:l10n_master -f'
       }
     }
   }
