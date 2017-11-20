@@ -7,7 +7,7 @@ timestamps {
       crowdin_cli = "java -jar $crowdin_cli/crowdin-cli.jar --config .ci/crowdin.yml"
       stage('Checkout') {
         step([$class: 'WsCleanup'])
-        checkout([$class: 'GitSCM', branches: [[name: '*/crowdin']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CloneOption', shallow: true], [$class: 'SubmoduleOption', recursiveSubmodules: true]], userRemoteConfigs: [[credentialsId: '6ef10f80-20dc-4661-af45-52a6e1e15749', name: 'upstream', url: 'github.com:DarthGandalf/znc.git']]])
+        checkout([$class: 'GitSCM', branches: [[name: '*/crowdin']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'SubmoduleOption', recursiveSubmodules: true]], userRemoteConfigs: [[credentialsId: '6ef10f80-20dc-4661-af45-52a6e1e15749', name: 'upstream', url: 'github.com:DarthGandalf/znc.git']]])
       }
       stage('Prepare strings') {
         dir("build") {
