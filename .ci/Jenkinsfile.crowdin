@@ -1,4 +1,5 @@
 #!groovy
+import groovy.json.JsonSlurper;
 
 def upstream_user = 'DarthGandalf'
 def upstream_repo = 'znc'
