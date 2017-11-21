@@ -12,20 +12,13 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: webskins/_default_/tmpl/index.tmpl:6
-msgid "Welcome to ZNC's web interface!"
-msgstr "Добро пожаловать в веб-интерфейс ZNC!"
-
-#: webskins/_default_/tmpl/index.tmpl:11
-msgid ""
-"No Web-enabled modules have been loaded. Load modules from IRC (“<code>/msg "
-"*status help</code>” and “<code>/msg *status loadmod &lt;module&gt;</"
-"code>”). Once you have loaded some Web-enabled modules, the menu will expand."
+#: webskins/_default_/tmpl/InfoBar.tmpl:2
+msgid "-Guest-"
 msgstr ""
-"Нет загруженных модулей с поддержкой веб-интерфейса. Вы можете загрузить их "
-"из IRC («<code>/msg *status help</code>» и «<code>/msg *status loadmod &lt;"
-"модуль&gt;</code>»). Когда такие модули будут загружены, они будут доступны "
-"в меню сбоку."
+
+#: webskins/_default_/tmpl/InfoBar.tmpl:5
+msgid "Logged in as: {1} (from {2})"
+msgstr "Вы вошли как: {1} (c {2})"
 
 #: webskins/_default_/tmpl/LoginBar.tmpl:3
 msgid "Logout"
@@ -47,13 +40,20 @@ msgstr "Пользовательские модули"
 msgid "Network Modules ({1})"
 msgstr "Модули сети {1}"
 
-#: webskins/_default_/tmpl/InfoBar.tmpl:2
-msgid "-Guest-"
-msgstr ""
+#: webskins/_default_/tmpl/index.tmpl:6
+msgid "Welcome to ZNC's web interface!"
+msgstr "Добро пожаловать в веб-интерфейс ZNC!"
 
-#: webskins/_default_/tmpl/InfoBar.tmpl:5
-msgid "Logged in as: {1} (from {2})"
-msgstr "Вы вошли как: {1} (c {2})"
+#: webskins/_default_/tmpl/index.tmpl:11
+msgid ""
+"No Web-enabled modules have been loaded. Load modules from IRC (“<code>/msg "
+"*status help</code>” and “<code>/msg *status loadmod &lt;module&gt;</"
+"code>”). Once you have loaded some Web-enabled modules, the menu will expand."
+msgstr ""
+"Нет загруженных модулей с поддержкой веб-интерфейса. Вы можете загрузить их "
+"из IRC («<code>/msg *status help</code>» и «<code>/msg *status loadmod &lt;"
+"модуль&gt;</code>»). Когда такие модули будут загружены, они будут доступны "
+"в меню сбоку."
 
 #: ClientCommand.cpp:51
 msgid "You must be connected with a network to use this command"

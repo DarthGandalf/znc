@@ -12,517 +12,6 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: modules/po/../data/webadmin/tmpl/del_user.tmpl:5
-msgid "Confirm User Deletion"
-msgstr "Подтверждение удаления пользователя"
-
-#: modules/po/../data/webadmin/tmpl/del_user.tmpl:9
-msgid "Are you sure you want to delete user “{1}”?"
-msgstr "Вы действительно хотите удалить пользователя «{1}»?"
-
-#: modules/po/../data/webadmin/tmpl/del_user.tmpl:14
-#: modules/po/../data/webadmin/tmpl/del_network.tmpl:14
-msgid "Yes"
-msgstr "Да"
-
-#: modules/po/../data/webadmin/tmpl/del_user.tmpl:17
-#: modules/po/../data/webadmin/tmpl/del_network.tmpl:17
-msgid "No"
-msgstr "Нет"
-
-#: modules/po/../data/webadmin/tmpl/index.tmpl:5
-msgid "Welcome to the ZNC webadmin module."
-msgstr "Добро пожаловать в webadmin ZNC."
-
-#: modules/po/../data/webadmin/tmpl/index.tmpl:6
-msgid ""
-"All changes you make will be in effect immediately after you submitted them."
-msgstr "Все изменения войдут в силу сразу, как только вы их сделаете."
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:15
-msgid "Authentication"
-msgstr "Аутентификация"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:19
-msgid "Username:"
-msgstr "Пользователь:"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:29
-msgid "Please enter a username."
-msgstr "Введите имя пользователя."
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:34
-msgid "Password:"
-msgstr "Пароль:"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:36
-msgid "Please enter a password."
-msgstr "Введите пароль."
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:39
-msgid "Confirm password:"
-msgstr "Подтвердите пароль:"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:41
-msgid "Please re-type the above password."
-msgstr "Введите пароль ещё раз."
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:44
-msgid "Allowed IPs:"
-msgstr "Разрешённые IP-адреса:"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:48
-msgid ""
-"Leave empty to allow connections from all IPs.<br/>Otherwise, one entry per "
-"line, wildcards * and ? are available."
-msgstr ""
-"Оставьте пустым, чтобы подключаться с любого адреса.<br/>Иначе, введите по "
-"одному IP на строку. Также доступны спецсимволы * и ?."
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:56
-msgid "IRC Information"
-msgstr "Информация IRC"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:58
-msgid ""
-"Nick, AltNick, Ident, RealName and QuitMsg can be left empty to use default "
-"values."
-msgstr ""
-"Оставьте ник, идент, настоящее имя и хост пустыми, чтобы использовать "
-"значения по умолчанию."
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:63
-#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:35
-msgid "Nickname:"
-msgstr "Ник:"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:65
-#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:37
-msgid "Your nickname on IRC."
-msgstr "Ваш ник в IRC."
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:68
-#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:40
-msgid "Alt. Nickname:"
-msgstr "Второй ник:"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:70
-#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:42
-msgid "Your secondary nickname, if the first is not available on IRC."
-msgstr "Ваш второй ник, на случай если первый недоступен."
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:74
-#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:46
-msgid "Ident:"
-msgstr "Идент:"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:76
-msgid "The Ident is sent to server as username."
-msgstr "Идент отсылается на сервер в качестве имени пользователя."
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:79
-#: modules/po/../data/webadmin/tmpl/settings.tmpl:102
-msgid "Status Prefix:"
-msgstr "Префикс для status"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:81
-#: modules/po/../data/webadmin/tmpl/settings.tmpl:104
-msgid "The prefix for the status and module queries."
-msgstr "Префикс для общения с модулями и статусом"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:85
-#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:51
-msgid "Realname:"
-msgstr "Настоящее имя:"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:87
-#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:53
-msgid "Your real name."
-msgstr "Ваше настоящее имя."
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:93
-#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:58
-msgid "BindHost:"
-msgstr "Хост:"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:99
-msgid "DCCBindHost:"
-msgstr "Хост для DCC:"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:106
-#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:65
-msgid "Quit Message:"
-msgstr "Сообщение при выходе:"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:108
-#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:67
-msgid "You may define a Message shown, when you quit IRC."
-msgstr ""
-"Вы можете установить сообщение, которое будет показано, когда вы выходите из "
-"IRC."
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:116
-#: modules/po/../data/webadmin/tmpl/listusers.tmpl:17
-#: modules/po/../data/webadmin/tmpl/traffic.tmpl:39
-msgid "Networks"
-msgstr "Сети"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:123
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:348
-#: modules/po/../data/webadmin/tmpl/listusers.tmpl:15
-#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:185
-#: modules/po/../data/webadmin/tmpl/settings.tmpl:72
-msgid "Add"
-msgstr "Добавить"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:125
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:168
-#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:188
-#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:228
-#: modules/po/../data/webadmin/tmpl/settings.tmpl:170
-msgid "Name"
-msgstr "Название"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:126
-#: modules/po/../data/webadmin/tmpl/listusers.tmpl:18
-msgid "Clients"
-msgstr "Клиенты"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:127
-msgid "Current Server"
-msgstr "Текущий сервер"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:128
-msgid "Nick"
-msgstr "Ник"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:130
-msgid "← Add a network (opens in same page)"
-msgstr "← Новая сеть (открывается на той же странице)"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:140
-#: modules/po/../data/webadmin/tmpl/listusers.tmpl:27
-#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:204
-msgid "Edit"
-msgstr "Изменить"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:140
-#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:204
-#: modules/po/../data/webadmin/tmpl/settings.tmpl:53
-msgid "Del"
-msgstr "Удалить"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:154
-msgid ""
-"You will be able to add + modify networks here after you have cloned the "
-"user."
-msgstr ""
-"Здесь после клонирования пользователя вы сможете добавлять и изменять сети."
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:156
-msgid ""
-"You will be able to add + modify networks here after you have created the "
-"user."
-msgstr ""
-"Здесь после создания пользователя вы сможете добавлять и изменять сети."
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:162
-#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:222
-msgid "Modules"
-msgstr "Модули"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:169
-#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:229
-#: modules/po/../data/webadmin/tmpl/settings.tmpl:171
-msgid "Arguments"
-msgstr "Параметры"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:170
-#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:230
-#: modules/po/../data/webadmin/tmpl/settings.tmpl:172
-msgid "Description"
-msgstr "Описание"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:171
-#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:231
-msgid "Loaded globally"
-msgstr "Загру&shy;жено гло&shy;бально"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:172
-#: modules/po/../data/webadmin/tmpl/settings.tmpl:173
-msgid "Loaded by networks"
-msgstr "Загружено сетями"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:225
-#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:176
-msgid "Channels"
-msgstr "Каналы"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:229
-#: modules/po/../data/webadmin/tmpl/add_edit_chan.tmpl:36
-msgid "Default Modes:"
-msgstr "Режимы по умолчанию:"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:231
-msgid ""
-"These are the default modes ZNC will set when you join an empty channel."
-msgstr ""
-"Режимы канала по умолчанию, которые ZNC будет выставлять при заходе на "
-"пустой канал."
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:232
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:238
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:257
-msgid "Empty = use standard value"
-msgstr "Если пусто, используется значение по умолчанию"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:235
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:254
-#: modules/po/../data/webadmin/tmpl/add_edit_chan.tmpl:30
-msgid "Buffer Size:"
-msgstr "Размер буфера:"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:237
-msgid ""
-"This is the amount of lines that the playback buffer will store for channels "
-"before dropping off the oldest line. The buffers are stored in the memory by "
-"default."
-msgstr ""
-"Количество строк в буферах для истории каналов. При переполнении из буфера "
-"удаляются самые старые строки. По умолчанию буферы хранятся в памяти."
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:245
-msgid "Queries"
-msgstr "Личные сообщения"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:249
-msgid "Max Buffers:"
-msgstr "Максимальное число буферов:"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:251
-msgid "Maximum number of query buffers. 0 is unlimited."
-msgstr ""
-"Максимальное число собеседников, личные переписки с которыми будут сохранены "
-"в буферах. 0 — без ограничений."
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:256
-msgid ""
-"This is the amount of lines that the playback buffer will store for queries "
-"before dropping off the oldest line. The buffers are stored in the memory by "
-"default."
-msgstr ""
-"Количество строк в буферах для истории личных переписок. При переполнении из "
-"буфера удаляются самые старые строки. По умолчанию буферы хранятся в памяти."
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:264
-#: modules/po/../data/webadmin/tmpl/add_edit_chan.tmpl:46
-msgid "Flags"
-msgstr "Переключатели"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:279
-msgid "ZNC Behavior"
-msgstr "Поведение ZNC"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:280
-msgid ""
-"Any of the following text boxes can be left empty to use their default value."
-msgstr ""
-"Можете оставить поля пустыми, чтобы использовать значения по умолчанию."
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:284
-msgid "Timestamp Format:"
-msgstr "Формат времени:"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:286
-msgid ""
-"The format for the timestamps used in buffers, for example [%H:%M:%S]. This "
-"setting is ignored in new IRC clients, which use server-time. If your client "
-"supports server-time, change timestamp format in client settings instead."
-msgstr ""
-"Формат отметок времени для буферов, например [%H:%M:%S]. В современных "
-"клиентах, поддерживающих расширение server-time, эта настройка игнорируется, "
-"при этом формат времени настраивается в самом клиенте."
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:289
-msgid "Timezone:"
-msgstr "Часовой пояс:"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:292
-msgid "E.g. <code>Europe/Berlin</code>, or <code>GMT-6</code>"
-msgstr "Например, <code>Asia/Novosibirsk</code> или <code>GMT+3</code>"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:300
-msgid "Character encoding used between IRC client and ZNC."
-msgstr "Кодировка символов, используемая между клиентом IRC и ZNC."
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:301
-msgid "Client encoding:"
-msgstr "Кодировка клиента:"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:306
-msgid "Join Tries:"
-msgstr "Попыток входа на канал:"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:308
-msgid ""
-"This defines how many times ZNC tries to join a channel, if the first join "
-"failed, e.g. due to channel mode +i/+k or if you are banned."
-msgstr ""
-"Сколько раз ZNC пытается зайти на канал. Неуспех может быть, например, из-за "
-"режимов канала +i или +k или если вас оттуда выгнали."
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:311
-msgid "Join speed:"
-msgstr "Скорость входа на каналы:"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:313
-msgid ""
-"How many channels are joined in one JOIN command. 0 is unlimited (default). "
-"Set to small positive value if you get disconnected with “Max SendQ Exceeded”"
-msgstr ""
-"На сколько каналов заходить одной командой JOIN. 0 — неограничено, это "
-"значение по умолчанию. Установите в маленькое положительное число, если вас "
-"отключает с ошибкой «Max SendQ Exceeded»"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:316
-msgid "Timeout before reconnect:"
-msgstr ""
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:318
-msgid ""
-"How much time ZNC waits (in seconds) until it receives something from "
-"network or declares the connection timeout. This happens after attempts to "
-"ping the peer."
-msgstr ""
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:321
-msgid "Max IRC Networks Number:"
-msgstr "Ограничение количества сетей IRC:"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:323
-msgid "Maximum number of IRC networks allowed for this user."
-msgstr ""
-"Наибольшее разрешённое число сетей IRC, которые может иметь этот "
-"пользователь."
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:326
-msgid "Substitutions"
-msgstr "подстановки"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:328
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:336
-msgid "CTCP Replies:"
-msgstr "Ответы CTCP:"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:332
-msgid "One reply per line. Example: <code>TIME Buy a watch!</code>"
-msgstr "По одному ответу в каждой строке. Пример: <code>TIME Купи часы!</code>"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:333
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:349
-msgid "{1} are available"
-msgstr "Доступны {1}"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:335
-msgid "Empty value means this CTCP request will be ignored"
-msgstr "Если пусто, этот запрос CTCP игнорируется"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:341
-msgid "Request"
-msgstr "Запрос"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:342
-msgid "Response"
-msgstr "Ответ"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:367
-#: modules/po/../data/webadmin/tmpl/settings.tmpl:90
-msgid "Skin:"
-msgstr "Тема:"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:371
-msgid "- Global -"
-msgstr "- Глобальная -"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:373
-#: modules/po/../data/webadmin/tmpl/settings.tmpl:94
-msgid "Default"
-msgstr "По умолчанию"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:377
-msgid "No other skins found"
-msgstr "Другие темы не найдены"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:383
-msgid "Language:"
-msgstr "Язык:"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:404
-#: modules/po/../data/webadmin/tmpl/add_edit_chan.tmpl:67
-#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:282
-msgid "Module {1}"
-msgstr "Модуль {1}"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:413
-#: modules/po/../data/webadmin/tmpl/add_edit_chan.tmpl:75
-#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:290
-msgid "Save and return"
-msgstr "Сохранить и вернуться"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:414
-#: modules/po/../data/webadmin/tmpl/add_edit_chan.tmpl:76
-#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:291
-msgid "Save and continue"
-msgstr "Сохранить и продолжить"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:416
-msgid "Clone and return"
-msgstr "Склонировать и вернуться"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:417
-msgid "Clone and continue"
-msgstr "Склонировать и продолжить"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:419
-msgid "Create and return"
-msgstr "Создать и вернуться"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:420
-msgid "Create and continue"
-msgstr "Создать и продолжить"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:424
-#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:187
-#: modules/po/../data/webadmin/tmpl/settings.tmpl:231
-msgid "Save"
-msgstr "Сохранить"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:426
-#: modules/po/../data/webadmin/tmpl/listusers.tmpl:28
-msgid "Clone"
-msgstr "Склонировать"
-
-#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:428
-msgid "Create"
-msgstr "Создать"
-
-#: modules/po/../data/webadmin/tmpl/del_network.tmpl:5
-msgid "Confirm Network Deletion"
-msgstr "Подтверждение удаления сети"
-
-#: modules/po/../data/webadmin/tmpl/del_network.tmpl:9
-msgid "Are you sure you want to delete network “{2}” of user “{1}”?"
-msgstr "Вы действительно хотите удалить сеть «{2}» пользователя «{1}»?"
-
-#: modules/po/../data/webadmin/tmpl/listusers.tmpl:16
-msgid "Username"
-msgstr "Пользователь"
-
-#: modules/po/../data/webadmin/tmpl/listusers.tmpl:29
-#: modules/po/../data/webadmin/tmpl/settings.tmpl:21
-msgid "Delete"
-msgstr "Удалить"
-
 #: modules/po/../data/webadmin/tmpl/add_edit_chan.tmpl:12
 msgid "Channel Info"
 msgstr "Информация о канале"
@@ -543,17 +32,51 @@ msgstr "Ключ:"
 msgid "The password of the channel, if there is one."
 msgstr "Пароль от канала, если имеется."
 
+#: modules/po/../data/webadmin/tmpl/add_edit_chan.tmpl:30
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:235
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:254
+msgid "Buffer Size:"
+msgstr "Размер буфера:"
+
 #: modules/po/../data/webadmin/tmpl/add_edit_chan.tmpl:32
 msgid "The buffer count."
 msgstr "Размер буфера."
+
+#: modules/po/../data/webadmin/tmpl/add_edit_chan.tmpl:36
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:229
+msgid "Default Modes:"
+msgstr "Режимы по умолчанию:"
 
 #: modules/po/../data/webadmin/tmpl/add_edit_chan.tmpl:38
 msgid "The default modes of the channel."
 msgstr "Режимы канала по умолчанию."
 
+#: modules/po/../data/webadmin/tmpl/add_edit_chan.tmpl:46
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:264
+msgid "Flags"
+msgstr "Переключатели"
+
 #: modules/po/../data/webadmin/tmpl/add_edit_chan.tmpl:51
 msgid "Save to config"
 msgstr "Сохранять в файл конфигурации"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_chan.tmpl:67
+#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:282
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:404
+msgid "Module {1}"
+msgstr "Модуль {1}"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_chan.tmpl:75
+#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:290
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:413
+msgid "Save and return"
+msgstr "Сохранить и вернуться"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_chan.tmpl:76
+#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:291
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:414
+msgid "Save and continue"
+msgstr "Сохранить и продолжить"
 
 #: modules/po/../data/webadmin/tmpl/add_edit_chan.tmpl:78
 msgid "Add Channel and return"
@@ -562,35 +85,6 @@ msgstr "Добавить канал и вернуться"
 #: modules/po/../data/webadmin/tmpl/add_edit_chan.tmpl:79
 msgid "Add Channel and continue"
 msgstr "Добавить канал и продолжить"
-
-#: modules/po/../data/webadmin/tmpl/encoding_settings.tmpl:6
-msgid "ZNC is compiled without encodings support. {1} is required for it."
-msgstr ""
-"ZNC собран без поддержки кодировки. Для этого необходима библиотека {1}."
-
-#: modules/po/../data/webadmin/tmpl/encoding_settings.tmpl:11
-msgid "Legacy mode is disabled by modpython."
-msgstr "Старый режим выключен модулем modpython."
-
-#: modules/po/../data/webadmin/tmpl/encoding_settings.tmpl:18
-msgid "Don't ensure any encoding at all (legacy mode, not recommended)"
-msgstr "Не гарантировать никакую кодировку (старый режим, не рекомендуется)"
-
-#: modules/po/../data/webadmin/tmpl/encoding_settings.tmpl:22
-msgid "Try to parse as UTF-8 and as {1}, send as UTF-8 (recommended)"
-msgstr "Принимать как UTF-8 и как {1}, отсылать как UTF-8 (рекомендуется)"
-
-#: modules/po/../data/webadmin/tmpl/encoding_settings.tmpl:26
-msgid "Try to parse as UTF-8 and as {1}, send as {1}"
-msgstr "Принимать как UTF-8 и как {1}, отсылать как {1}"
-
-#: modules/po/../data/webadmin/tmpl/encoding_settings.tmpl:30
-msgid "Parse and send as {1} only"
-msgstr "Принимать и отсылать только как {1}"
-
-#: modules/po/../data/webadmin/tmpl/encoding_settings.tmpl:36
-msgid "E.g. <code>UTF-8</code>, or <code>ISO-8859-15</code>"
-msgstr "Например, <code>UTF-8</code> или <code>CP-1251</code>"
 
 #: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:8
 #: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:11
@@ -630,9 +124,61 @@ msgstr "Название сети:"
 msgid "The name of the IRC network."
 msgstr "Название этой сети IRC."
 
+#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:35
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:63
+msgid "Nickname:"
+msgstr "Ник:"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:37
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:65
+msgid "Your nickname on IRC."
+msgstr "Ваш ник в IRC."
+
+#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:40
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:68
+msgid "Alt. Nickname:"
+msgstr "Второй ник:"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:42
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:70
+msgid "Your secondary nickname, if the first is not available on IRC."
+msgstr "Ваш второй ник, на случай если первый недоступен."
+
+#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:46
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:74
+msgid "Ident:"
+msgstr "Идент:"
+
 #: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:48
 msgid "Your ident."
 msgstr "Ваш ident, отсылается на сервер в качестве имени пользователя."
+
+#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:51
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:85
+msgid "Realname:"
+msgstr "Настоящее имя:"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:53
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:87
+msgid "Your real name."
+msgstr "Ваше настоящее имя."
+
+#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:58
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:93
+msgid "BindHost:"
+msgstr "Хост:"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:65
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:106
+msgid "Quit Message:"
+msgstr "Сообщение при выходе:"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:67
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:108
+msgid "You may define a Message shown, when you quit IRC."
+msgstr ""
+"Вы можете установить сообщение, которое будет показано, когда вы выходите из "
+"IRC."
 
 #: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:71
 msgid "Active:"
@@ -777,10 +323,37 @@ msgstr "Кодировка символов, используемая между
 msgid "Server encoding:"
 msgstr "Кодировка сервера:"
 
+#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:176
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:225
+msgid "Channels"
+msgstr "Каналы"
+
 #: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:178
 msgid ""
 "You will be able to add + modify channels here after you created the network."
 msgstr "Здесь после создания сети вы сможете добавлять и изменять каналы."
+
+#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:185
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:123
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:348
+#: modules/po/../data/webadmin/tmpl/listusers.tmpl:15
+#: modules/po/../data/webadmin/tmpl/settings.tmpl:72
+msgid "Add"
+msgstr "Добавить"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:187
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:424
+#: modules/po/../data/webadmin/tmpl/settings.tmpl:231
+msgid "Save"
+msgstr "Сохранить"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:188
+#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:228
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:125
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:168
+#: modules/po/../data/webadmin/tmpl/settings.tmpl:170
+msgid "Name"
+msgstr "Название"
 
 #: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:189
 msgid "CurModes"
@@ -802,6 +375,40 @@ msgstr "Опции"
 msgid "← Add a channel (opens in same page)"
 msgstr "← Новый канал (открывается на той же странице)"
 
+#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:204
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:140
+#: modules/po/../data/webadmin/tmpl/listusers.tmpl:27
+msgid "Edit"
+msgstr "Изменить"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:204
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:140
+#: modules/po/../data/webadmin/tmpl/settings.tmpl:53
+msgid "Del"
+msgstr "Удалить"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:222
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:162
+msgid "Modules"
+msgstr "Модули"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:229
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:169
+#: modules/po/../data/webadmin/tmpl/settings.tmpl:171
+msgid "Arguments"
+msgstr "Параметры"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:230
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:170
+#: modules/po/../data/webadmin/tmpl/settings.tmpl:172
+msgid "Description"
+msgstr "Описание"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:231
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:171
+msgid "Loaded globally"
+msgstr "Загру&shy;жено гло&shy;бально"
+
 #: modules/po/../data/webadmin/tmpl/add_edit_network.tmpl:232
 msgid "Loaded by user"
 msgstr "Загру&shy;жено пользо&shy;вателем"
@@ -814,78 +421,398 @@ msgstr "Добавить сеть и вернуться"
 msgid "Add Network and continue"
 msgstr "Добавить сеть и продолжить"
 
-#: modules/po/../data/webadmin/tmpl/traffic.tmpl:7
-msgid "Information"
-msgstr "Информация"
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:15
+msgid "Authentication"
+msgstr "Аутентификация"
 
-#: modules/po/../data/webadmin/tmpl/traffic.tmpl:13
-msgid "Uptime"
-msgstr "Время работы"
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:19
+msgid "Username:"
+msgstr "Пользователь:"
 
-#: modules/po/../data/webadmin/tmpl/traffic.tmpl:18
-msgid "Total Users"
-msgstr "Всего пользователей"
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:29
+msgid "Please enter a username."
+msgstr "Введите имя пользователя."
 
-#: modules/po/../data/webadmin/tmpl/traffic.tmpl:22
-msgid "Total Networks"
-msgstr "Всего сетей"
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:34
+msgid "Password:"
+msgstr "Пароль:"
 
-#: modules/po/../data/webadmin/tmpl/traffic.tmpl:26
-#: modules/po/../data/webadmin/tmpl/traffic.tmpl:43
-msgid "Attached Networks"
-msgstr "Сетей, к которым присоединены клиенты"
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:36
+msgid "Please enter a password."
+msgstr "Введите пароль."
 
-#: modules/po/../data/webadmin/tmpl/traffic.tmpl:30
-msgid "Total Client Connections"
-msgstr "Всего соединений с клиентами"
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:39
+msgid "Confirm password:"
+msgstr "Подтвердите пароль:"
 
-#: modules/po/../data/webadmin/tmpl/traffic.tmpl:34
-msgid "Total IRC Connections"
-msgstr "Всего соединений с IRC"
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:41
+msgid "Please re-type the above password."
+msgstr "Введите пароль ещё раз."
 
-#: modules/po/../data/webadmin/tmpl/traffic.tmpl:47
-msgid "Client Connections"
-msgstr "Соединения с клиентами"
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:44
+msgid "Allowed IPs:"
+msgstr "Разрешённые IP-адреса:"
 
-#: modules/po/../data/webadmin/tmpl/traffic.tmpl:51
-msgid "IRC Connections"
-msgstr "Соединения с IRC"
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:48
+msgid ""
+"Leave empty to allow connections from all IPs.<br/>Otherwise, one entry per "
+"line, wildcards * and ? are available."
+msgstr ""
+"Оставьте пустым, чтобы подключаться с любого адреса.<br/>Иначе, введите по "
+"одному IP на строку. Также доступны спецсимволы * и ?."
 
-#: modules/po/../data/webadmin/tmpl/traffic.tmpl:63
-#: modules/po/../data/webadmin/tmpl/traffic.tmpl:72
-#: modules/po/../data/webadmin/tmpl/traffic.tmpl:89
-#: modules/po/../data/webadmin/tmpl/traffic.tmpl:117
-msgid "Total"
-msgstr "Всего"
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:56
+msgid "IRC Information"
+msgstr "Информация IRC"
 
-#: modules/po/../data/webadmin/tmpl/traffic.tmpl:70
-#: modules/po/../data/webadmin/tmpl/traffic.tmpl:115
-msgctxt "Traffic"
-msgid "In"
-msgstr "Пришло"
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:58
+msgid ""
+"Nick, AltNick, Ident, RealName and QuitMsg can be left empty to use default "
+"values."
+msgstr ""
+"Оставьте ник, идент, настоящее имя и хост пустыми, чтобы использовать "
+"значения по умолчанию."
 
-#: modules/po/../data/webadmin/tmpl/traffic.tmpl:71
-#: modules/po/../data/webadmin/tmpl/traffic.tmpl:116
-msgctxt "Traffic"
-msgid "Out"
-msgstr "Ушло"
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:76
+msgid "The Ident is sent to server as username."
+msgstr "Идент отсылается на сервер в качестве имени пользователя."
 
-#: modules/po/../data/webadmin/tmpl/traffic.tmpl:77
-#: modules/po/../data/webadmin/tmpl/traffic.tmpl:104
-msgid "Users"
-msgstr "Пользователи"
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:79
+#: modules/po/../data/webadmin/tmpl/settings.tmpl:102
+msgid "Status Prefix:"
+msgstr "Префикс для status"
 
-#: modules/po/../data/webadmin/tmpl/traffic.tmpl:106
-msgid "Traffic"
-msgstr "Трафик"
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:81
+#: modules/po/../data/webadmin/tmpl/settings.tmpl:104
+msgid "The prefix for the status and module queries."
+msgstr "Префикс для общения с модулями и статусом"
 
-#: modules/po/../data/webadmin/tmpl/traffic.tmpl:113
-msgid "User"
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:99
+msgid "DCCBindHost:"
+msgstr "Хост для DCC:"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:116
+#: modules/po/../data/webadmin/tmpl/listusers.tmpl:17
+#: modules/po/../data/webadmin/tmpl/traffic.tmpl:39
+msgid "Networks"
+msgstr "Сети"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:126
+#: modules/po/../data/webadmin/tmpl/listusers.tmpl:18
+msgid "Clients"
+msgstr "Клиенты"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:127
+msgid "Current Server"
+msgstr "Текущий сервер"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:128
+msgid "Nick"
+msgstr "Ник"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:130
+msgid "← Add a network (opens in same page)"
+msgstr "← Новая сеть (открывается на той же странице)"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:154
+msgid ""
+"You will be able to add + modify networks here after you have cloned the "
+"user."
+msgstr ""
+"Здесь после клонирования пользователя вы сможете добавлять и изменять сети."
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:156
+msgid ""
+"You will be able to add + modify networks here after you have created the "
+"user."
+msgstr ""
+"Здесь после создания пользователя вы сможете добавлять и изменять сети."
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:172
+#: modules/po/../data/webadmin/tmpl/settings.tmpl:173
+msgid "Loaded by networks"
+msgstr "Загружено сетями"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:231
+msgid ""
+"These are the default modes ZNC will set when you join an empty channel."
+msgstr ""
+"Режимы канала по умолчанию, которые ZNC будет выставлять при заходе на "
+"пустой канал."
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:232
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:238
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:257
+msgid "Empty = use standard value"
+msgstr "Если пусто, используется значение по умолчанию"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:237
+msgid ""
+"This is the amount of lines that the playback buffer will store for channels "
+"before dropping off the oldest line. The buffers are stored in the memory by "
+"default."
+msgstr ""
+"Количество строк в буферах для истории каналов. При переполнении из буфера "
+"удаляются самые старые строки. По умолчанию буферы хранятся в памяти."
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:245
+msgid "Queries"
+msgstr "Личные сообщения"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:249
+msgid "Max Buffers:"
+msgstr "Максимальное число буферов:"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:251
+msgid "Maximum number of query buffers. 0 is unlimited."
+msgstr ""
+"Максимальное число собеседников, личные переписки с которыми будут сохранены "
+"в буферах. 0 — без ограничений."
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:256
+msgid ""
+"This is the amount of lines that the playback buffer will store for queries "
+"before dropping off the oldest line. The buffers are stored in the memory by "
+"default."
+msgstr ""
+"Количество строк в буферах для истории личных переписок. При переполнении из "
+"буфера удаляются самые старые строки. По умолчанию буферы хранятся в памяти."
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:279
+msgid "ZNC Behavior"
+msgstr "Поведение ZNC"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:280
+msgid ""
+"Any of the following text boxes can be left empty to use their default value."
+msgstr ""
+"Можете оставить поля пустыми, чтобы использовать значения по умолчанию."
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:284
+msgid "Timestamp Format:"
+msgstr "Формат времени:"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:286
+msgid ""
+"The format for the timestamps used in buffers, for example [%H:%M:%S]. This "
+"setting is ignored in new IRC clients, which use server-time. If your client "
+"supports server-time, change timestamp format in client settings instead."
+msgstr ""
+"Формат отметок времени для буферов, например [%H:%M:%S]. В современных "
+"клиентах, поддерживающих расширение server-time, эта настройка игнорируется, "
+"при этом формат времени настраивается в самом клиенте."
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:289
+msgid "Timezone:"
+msgstr "Часовой пояс:"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:292
+msgid "E.g. <code>Europe/Berlin</code>, or <code>GMT-6</code>"
+msgstr "Например, <code>Asia/Novosibirsk</code> или <code>GMT+3</code>"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:300
+msgid "Character encoding used between IRC client and ZNC."
+msgstr "Кодировка символов, используемая между клиентом IRC и ZNC."
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:301
+msgid "Client encoding:"
+msgstr "Кодировка клиента:"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:306
+msgid "Join Tries:"
+msgstr "Попыток входа на канал:"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:308
+msgid ""
+"This defines how many times ZNC tries to join a channel, if the first join "
+"failed, e.g. due to channel mode +i/+k or if you are banned."
+msgstr ""
+"Сколько раз ZNC пытается зайти на канал. Неуспех может быть, например, из-за "
+"режимов канала +i или +k или если вас оттуда выгнали."
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:311
+msgid "Join speed:"
+msgstr "Скорость входа на каналы:"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:313
+msgid ""
+"How many channels are joined in one JOIN command. 0 is unlimited (default). "
+"Set to small positive value if you get disconnected with “Max SendQ Exceeded”"
+msgstr ""
+"На сколько каналов заходить одной командой JOIN. 0 — неограничено, это "
+"значение по умолчанию. Установите в маленькое положительное число, если вас "
+"отключает с ошибкой «Max SendQ Exceeded»"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:316
+msgid "Timeout before reconnect:"
+msgstr ""
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:318
+msgid ""
+"How much time ZNC waits (in seconds) until it receives something from "
+"network or declares the connection timeout. This happens after attempts to "
+"ping the peer."
+msgstr ""
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:321
+msgid "Max IRC Networks Number:"
+msgstr "Ограничение количества сетей IRC:"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:323
+msgid "Maximum number of IRC networks allowed for this user."
+msgstr ""
+"Наибольшее разрешённое число сетей IRC, которые может иметь этот "
+"пользователь."
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:326
+msgid "Substitutions"
+msgstr "подстановки"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:328
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:336
+msgid "CTCP Replies:"
+msgstr "Ответы CTCP:"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:332
+msgid "One reply per line. Example: <code>TIME Buy a watch!</code>"
+msgstr "По одному ответу в каждой строке. Пример: <code>TIME Купи часы!</code>"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:333
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:349
+msgid "{1} are available"
+msgstr "Доступны {1}"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:335
+msgid "Empty value means this CTCP request will be ignored"
+msgstr "Если пусто, этот запрос CTCP игнорируется"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:341
+msgid "Request"
+msgstr "Запрос"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:342
+msgid "Response"
+msgstr "Ответ"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:367
+#: modules/po/../data/webadmin/tmpl/settings.tmpl:90
+msgid "Skin:"
+msgstr "Тема:"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:371
+msgid "- Global -"
+msgstr "- Глобальная -"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:373
+#: modules/po/../data/webadmin/tmpl/settings.tmpl:94
+msgid "Default"
+msgstr "По умолчанию"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:377
+msgid "No other skins found"
+msgstr "Другие темы не найдены"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:383
+msgid "Language:"
+msgstr "Язык:"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:416
+msgid "Clone and return"
+msgstr "Склонировать и вернуться"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:417
+msgid "Clone and continue"
+msgstr "Склонировать и продолжить"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:419
+msgid "Create and return"
+msgstr "Создать и вернуться"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:420
+msgid "Create and continue"
+msgstr "Создать и продолжить"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:426
+#: modules/po/../data/webadmin/tmpl/listusers.tmpl:28
+msgid "Clone"
+msgstr "Склонировать"
+
+#: modules/po/../data/webadmin/tmpl/add_edit_user.tmpl:428
+msgid "Create"
+msgstr "Создать"
+
+#: modules/po/../data/webadmin/tmpl/del_network.tmpl:5
+msgid "Confirm Network Deletion"
+msgstr "Подтверждение удаления сети"
+
+#: modules/po/../data/webadmin/tmpl/del_network.tmpl:9
+msgid "Are you sure you want to delete network “{2}” of user “{1}”?"
+msgstr "Вы действительно хотите удалить сеть «{2}» пользователя «{1}»?"
+
+#: modules/po/../data/webadmin/tmpl/del_network.tmpl:14
+#: modules/po/../data/webadmin/tmpl/del_user.tmpl:14
+msgid "Yes"
+msgstr "Да"
+
+#: modules/po/../data/webadmin/tmpl/del_network.tmpl:17
+#: modules/po/../data/webadmin/tmpl/del_user.tmpl:17
+msgid "No"
+msgstr "Нет"
+
+#: modules/po/../data/webadmin/tmpl/del_user.tmpl:5
+msgid "Confirm User Deletion"
+msgstr "Подтверждение удаления пользователя"
+
+#: modules/po/../data/webadmin/tmpl/del_user.tmpl:9
+msgid "Are you sure you want to delete user “{1}”?"
+msgstr "Вы действительно хотите удалить пользователя «{1}»?"
+
+#: modules/po/../data/webadmin/tmpl/encoding_settings.tmpl:6
+msgid "ZNC is compiled without encodings support. {1} is required for it."
+msgstr ""
+"ZNC собран без поддержки кодировки. Для этого необходима библиотека {1}."
+
+#: modules/po/../data/webadmin/tmpl/encoding_settings.tmpl:11
+msgid "Legacy mode is disabled by modpython."
+msgstr "Старый режим выключен модулем modpython."
+
+#: modules/po/../data/webadmin/tmpl/encoding_settings.tmpl:18
+msgid "Don't ensure any encoding at all (legacy mode, not recommended)"
+msgstr "Не гарантировать никакую кодировку (старый режим, не рекомендуется)"
+
+#: modules/po/../data/webadmin/tmpl/encoding_settings.tmpl:22
+msgid "Try to parse as UTF-8 and as {1}, send as UTF-8 (recommended)"
+msgstr "Принимать как UTF-8 и как {1}, отсылать как UTF-8 (рекомендуется)"
+
+#: modules/po/../data/webadmin/tmpl/encoding_settings.tmpl:26
+msgid "Try to parse as UTF-8 and as {1}, send as {1}"
+msgstr "Принимать как UTF-8 и как {1}, отсылать как {1}"
+
+#: modules/po/../data/webadmin/tmpl/encoding_settings.tmpl:30
+msgid "Parse and send as {1} only"
+msgstr "Принимать и отсылать только как {1}"
+
+#: modules/po/../data/webadmin/tmpl/encoding_settings.tmpl:36
+msgid "E.g. <code>UTF-8</code>, or <code>ISO-8859-15</code>"
+msgstr "Например, <code>UTF-8</code> или <code>CP-1251</code>"
+
+#: modules/po/../data/webadmin/tmpl/index.tmpl:5
+msgid "Welcome to the ZNC webadmin module."
+msgstr "Добро пожаловать в webadmin ZNC."
+
+#: modules/po/../data/webadmin/tmpl/index.tmpl:6
+msgid ""
+"All changes you make will be in effect immediately after you submitted them."
+msgstr "Все изменения войдут в силу сразу, как только вы их сделаете."
+
+#: modules/po/../data/webadmin/tmpl/listusers.tmpl:16
+msgid "Username"
 msgstr "Пользователь"
 
-#: modules/po/../data/webadmin/tmpl/traffic.tmpl:114
-msgid "Network"
-msgstr "Сеть"
+#: modules/po/../data/webadmin/tmpl/listusers.tmpl:29
+#: modules/po/../data/webadmin/tmpl/settings.tmpl:21
+msgid "Delete"
+msgstr "Удалить"
 
 #: modules/po/../data/webadmin/tmpl/settings.tmpl:6
 msgid "Listen Port(s)"
@@ -1010,6 +937,79 @@ msgstr "Глобальные модули"
 #: modules/po/../data/webadmin/tmpl/settings.tmpl:174
 msgid "Loaded by users"
 msgstr "Загружено пользо&shy;вателями"
+
+#: modules/po/../data/webadmin/tmpl/traffic.tmpl:7
+msgid "Information"
+msgstr "Информация"
+
+#: modules/po/../data/webadmin/tmpl/traffic.tmpl:13
+msgid "Uptime"
+msgstr "Время работы"
+
+#: modules/po/../data/webadmin/tmpl/traffic.tmpl:18
+msgid "Total Users"
+msgstr "Всего пользователей"
+
+#: modules/po/../data/webadmin/tmpl/traffic.tmpl:22
+msgid "Total Networks"
+msgstr "Всего сетей"
+
+#: modules/po/../data/webadmin/tmpl/traffic.tmpl:26
+#: modules/po/../data/webadmin/tmpl/traffic.tmpl:43
+msgid "Attached Networks"
+msgstr "Сетей, к которым присоединены клиенты"
+
+#: modules/po/../data/webadmin/tmpl/traffic.tmpl:30
+msgid "Total Client Connections"
+msgstr "Всего соединений с клиентами"
+
+#: modules/po/../data/webadmin/tmpl/traffic.tmpl:34
+msgid "Total IRC Connections"
+msgstr "Всего соединений с IRC"
+
+#: modules/po/../data/webadmin/tmpl/traffic.tmpl:47
+msgid "Client Connections"
+msgstr "Соединения с клиентами"
+
+#: modules/po/../data/webadmin/tmpl/traffic.tmpl:51
+msgid "IRC Connections"
+msgstr "Соединения с IRC"
+
+#: modules/po/../data/webadmin/tmpl/traffic.tmpl:63
+#: modules/po/../data/webadmin/tmpl/traffic.tmpl:72
+#: modules/po/../data/webadmin/tmpl/traffic.tmpl:89
+#: modules/po/../data/webadmin/tmpl/traffic.tmpl:117
+msgid "Total"
+msgstr "Всего"
+
+#: modules/po/../data/webadmin/tmpl/traffic.tmpl:70
+#: modules/po/../data/webadmin/tmpl/traffic.tmpl:115
+msgctxt "Traffic"
+msgid "In"
+msgstr "Пришло"
+
+#: modules/po/../data/webadmin/tmpl/traffic.tmpl:71
+#: modules/po/../data/webadmin/tmpl/traffic.tmpl:116
+msgctxt "Traffic"
+msgid "Out"
+msgstr "Ушло"
+
+#: modules/po/../data/webadmin/tmpl/traffic.tmpl:77
+#: modules/po/../data/webadmin/tmpl/traffic.tmpl:104
+msgid "Users"
+msgstr "Пользователи"
+
+#: modules/po/../data/webadmin/tmpl/traffic.tmpl:106
+msgid "Traffic"
+msgstr "Трафик"
+
+#: modules/po/../data/webadmin/tmpl/traffic.tmpl:113
+msgid "User"
+msgstr "Пользователь"
+
+#: modules/po/../data/webadmin/tmpl/traffic.tmpl:114
+msgid "Network"
+msgstr "Сеть"
 
 #: webadmin.cpp:91 webadmin.cpp:1866
 msgid "Global Settings"
