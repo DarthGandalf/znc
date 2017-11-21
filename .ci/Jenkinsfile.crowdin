@@ -24,7 +24,7 @@ timestamps {
       stage('Crowdin') {
         withCredentials([string(credentialsId: '11c7e2b4-f990-4670-98a4-c89d2a5a2f43', variable: 'CROWDIN_API_KEY')]) {
           withEnv(['CROWDIN_BASE_PATH='+pwd()]) {
-            sh "$crowdin_cli upload sources --branch master"
+//            sh "$crowdin_cli upload sources --branch master"
 //            sh "$crowdin_cli upload translations --branch ${upstream_branch}"
 //            sh "$crowdin_cli download --branch ${upstream_branch}"
           }
@@ -48,7 +48,7 @@ timestamps {
         withCredentials([string(credentialsId: '7a2546ae-8a29-4eab-921c-6a4803456dce', variable: 'GITHUB_OAUTH_KEY')]) {
           def headers = [[maskValue: true, name: 'Authorization', value: "token ${env.GITHUB_OAUTH_KEY}"], [maskValue: false, name: 'Accept', value: 'application/vnd.github.v3+json']]
           def pulls = httpRequest consoleLogResponseBody: true, customHeaders: headers, url: "https://api.github.com/repos/${upstream_user}/${upstream_repo}/pulls", requestBody: '{"head":"znc-jenkins:l10n_master","base":"'+upstream_branch+'"}'
-          pulls = new JsonSlurper().parseText(pulls)
+          pulls = new JsonSlurper().parseText(pulls.content)
           if (!pulls) {
             httpRequest consoleLogResponseBody: true, customHeaders: headers, url: "https://api.github.com/repos/${upstream_user}/${upstream_repo}/pulls", httpMode: 'POST', requestBody: '{"head":"znc-jenkins:l10n_master","base":"'+upstream_branch+'","title":"Update translations from Crowdin"}'
           }
