@@ -19,32 +19,9 @@
 # http://public.kitware.com/Bug/view.php?id=8774
 
 include(ExternalProject)
-include(FindPackageMessage)
 
-# There is FindGTest.cmake, but it doesn't find gmock
-#message(STATUS "Looking for GTest/GMock")
-find_path(GTEST_ROOT src/gtest-all.cc
-	HINTS ENV GTEST_ROOT
-	PATHS "${PROJECT_SOURCE_DIR}/third_party/googletest/googletest")
-find_path(GMOCK_ROOT src/gmock-all.cc
-	HINTS ENV GMOCK_ROOT
-	PATHS "${PROJECT_SOURCE_DIR}/third_party/googletest/googlemock")
-
-set(gtest_error_msg "not found, testing will be disabled.")
-set(gtest_error_msg "${gtest_error_msg} You can set environment variables")
-set(gtest_error_msg "${gtest_error_msg} GTEST_ROOT and GMOCK_ROOT")
-if(GTEST_ROOT)
-	find_package_message(gtest "Found GoogleTest: ${GTEST_ROOT}"
-		"${GTEST_ROOT}")
-else()
-	find_package_message(gtest "GoogleTest ${gtest_error_msg}" "${GTEST_ROOT}")
-	return()
-endif()
-if(GMOCK_ROOT)
-	find_package_message(gmock "Found GoogleMock: ${GMOCK_ROOT}"
-		"${GMOCK_ROOT}")
-else()
-	find_package_message(gmock "GoogleMock ${gtest_error_msg}" "${GMOCK_ROOT}")
+include(ZNCFindGTest)
+if (NOT GMock_FOUND)
 	return()
 endif()
 
@@ -55,17 +32,12 @@ set_property(DIRECTORY APPEND PROPERTY COMPILE_DEFINITIONS
 	"GTEST_HAS_POSIX_RE=0")
 
 add_executable(unittest_bin EXCLUDE_FROM_ALL
-	"${GMOCK_ROOT}/src/gmock_main.cc"
-	"${GTEST_ROOT}/src/gtest-all.cc"
-	"${GMOCK_ROOT}/src/gmock-all.cc"
 	"ThreadTest.cpp" "NickTest.cpp" "ClientTest.cpp" "NetworkTest.cpp"
 	"MessageTest.cpp" "ModulesTest.cpp" "IRCSockTest.cpp" "QueryTest.cpp"
 	"StringTest.cpp" "ConfigTest.cpp" "BufferTest.cpp" "UtilsTest.cpp"
 	"UserTest.cpp" "DebugTest.cpp")
-target_link_libraries(unittest_bin PRIVATE znclib)
-target_include_directories(unittest_bin PRIVATE
-	"${GTEST_ROOT}" "${GTEST_ROOT}/include"
-	"${GMOCK_ROOT}" "${GMOCK_ROOT}/include")
+target_link_libraries(unittest_bin PRIVATE znclib GTest::gmock_main
+	GTest::gtest GTest::gmock)
 add_custom_target(unittest COMMAND unittest_bin)
 
 # Use different compiler flags, because Qt fails with sanitizers,
@@ -79,16 +51,14 @@ externalproject_add(inttest_bin
 	CMAKE_CACHE_ARGS
 	# Note the space in the end: protect from CXXFLAGS env var (see comment
 	# above), but still support custom flags
-	"-DCMAKE_CXX_FLAGS:string=${INTEGRATION_TEST_CXX_FLAGS} "
+	"-DCMAKE_CXX_FLAGS:STRING=${INTEGRATION_TEST_CXX_FLAGS} "
 	# Build integration test with the correct compiler.
 	# https://bugs.gentoo.org/699258
 	# CMAKE_CXX_COMPILER is passed for the case if the main cmake was called
 	# with -DCMAKE_CXX_COMPILER but without -DCMAKE_TOOLCHAIN_FILE.
 	"-DCMAKE_TOOLCHAIN_FILE:path=${CMAKE_TOOLCHAIN_FILE}"
-	"-DCMAKE_CXX_COMPILER:string=${CMAKE_CXX_COMPILER}"
+	"-DCMAKE_CXX_COMPILER:STRING=${CMAKE_CXX_COMPILER}"
 
-	"-DGTEST_ROOT:path=${GTEST_ROOT}"
-	"-DGMOCK_ROOT:path=${GMOCK_ROOT}"
 	"-DZNC_BIN_DIR:path=${CMAKE_INSTALL_FULL_BINDIR}"
 	"-DQt5_HINTS:path=${brew_qt5}")
 add_custom_target(inttest COMMAND

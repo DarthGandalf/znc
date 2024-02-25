@@ -16,6 +16,8 @@
 
 cmake_minimum_required(VERSION 3.13)
 project(ZNCIntegrationTest LANGUAGES CXX)
+set(ZNC_PROJECT_DIR "${PROJECT_SOURCE_DIR}/../..")
+list(APPEND CMAKE_MODULE_PATH "${ZNC_SOURCE_DIR}/cmake")
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED true)
@@ -25,6 +27,7 @@ set(THREADS_PREFER_PTHREAD_FLAG true)
 find_package(Threads REQUIRED)
 
 find_package(Qt5Network 5.4 REQUIRED HINTS ${Qt5_HINTS})
+include(ZNCFindGTest)
 
 # Force the simple internal regex engine to get consistent behavior on all
 # platforms. See
@@ -38,15 +41,12 @@ add_executable(inttest
 	"framework/znctest.cpp"
 	"tests/core.cpp"
 	"tests/modules.cpp"
-	"tests/scripting.cpp"
-	"${GTEST_ROOT}/src/gtest-all.cc"
-	"${GMOCK_ROOT}/src/gmock-all.cc")
+	"tests/scripting.cpp")
 
-target_link_libraries(inttest Qt5::Network Threads::Threads)
+target_link_libraries(inttest Qt5::Network Threads::Threads GTest::gtest
+	GTest::gmock)
 target_include_directories(inttest PUBLIC
 	"${PROJECT_SOURCE_DIR}/framework"
-	"${PROJECT_BINARY_DIR}"
-	"${GTEST_ROOT}" "${GTEST_ROOT}/include"
-	"${GMOCK_ROOT}" "${GMOCK_ROOT}/include")
+	"${PROJECT_BINARY_DIR}")
 target_compile_definitions(inttest PRIVATE
 	"ZNC_BIN_DIR=\"${ZNC_BIN_DIR}\"")
